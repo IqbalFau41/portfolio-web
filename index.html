@@ -1,339 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Iqbal Fauzan — IoT & Automation Engineer</title>
-<meta name="description" content="Iqbal Fauzan — IoT & Automation Engineer. IT/OT integration, industrial networking, PLC & M2M protocols (OPC UA, Modbus, MQTT)." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230E6B62'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' fill='%23F4F6F7' text-anchor='middle'%3EIF%3C/text%3E%3C/svg%3E" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
+<meta name="description" content="Portfolio Iqbal Fauzan, IoT & Automation Engineer yang fokus pada integrasi OT/IT, industrial networking, dan digitalisasi pabrik." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          paper: '#F4F6F7',
-          panel: '#EAEDEF',
-          ink: '#14181C',
-          graphite: '#5B6570',
-          line: '#D3D8DB',
-          signal: '#0E6B62',
-          signalDim: '#0E6B6214',
-          amber: '#C2831A',
+          paper: "#FAFAF8",
+          ink: "#1B1F23",
+          inkmuted: "#5B6169",
+          blueprint: "#2E5FA3",
+          signal: "#1E8F6F",
+          hairline: "#D7DBE0",
         },
         fontFamily: {
-          display: ['"Space Grotesk"', 'sans-serif'],
-          body: ['Inter', 'sans-serif'],
-          mono: ['"IBM Plex Mono"', 'monospace'],
+          display: ['"Space Grotesk"', "sans-serif"],
+          body: ["Inter", "sans-serif"],
+          mono: ['"JetBrains Mono"', "monospace"],
         },
-      }
-    }
-  }
+      },
+    },
+  };
 </script>
-
-<!-- Link to external CSS -->
-<link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="font-body text-ink antialiased">
+<body class="font-body bg-paper text-ink">
 
-  <!-- Top bar -->
-  <div class="no-print fixed top-0 inset-x-0 z-30 backdrop-blur bg-paper/80 border-b border-line">
-    <div class="max-w-3xl mx-auto px-6 sm:px-8 h-14 flex items-center justify-between">
-      <span class="font-mono text-xs tracking-widest text-graphite">IF / 2026</span>
-      
-      <!-- Right Side: Language Switcher & Download -->
-      <div class="flex items-center gap-6">
-        <div class="flex items-center gap-2 font-mono text-[11px] tracking-widest text-graphite">
-          <button onclick="changeLanguage('en')" data-lang="en" class="lang-switch text-signal font-bold transition-colors">EN</button>
-          <span class="text-line">/</span>
-          <button onclick="changeLanguage('id')" data-lang="id" class="lang-switch hover:text-signal transition-colors">ID</button>
-          <span class="text-line">/</span>
-          <button onclick="changeLanguage('de')" data-lang="de" class="lang-switch hover:text-signal transition-colors">DE</button>
-        </div>
-        
-        <button onclick="window.print()" data-i18n="download_pdf"
-          class="font-mono text-xs tracking-wide border border-line px-3 py-1.5 hover:border-signal hover:text-signal transition-colors">
-          DOWNLOAD PDF
-        </button>
+<nav class="site-nav no-print">
+  <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
+    <a href="index.html" class="font-display font-medium text-lg text-ink">Iqbal Fauzan<span class="text-blueprint">.</span></a>
+    <button id="nav-toggle" class="md:hidden p-2" aria-label="Menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div id="nav-menu" class="md:flex items-center gap-7 py-4 md:py-0">
+      <a class="nav-link block py-2 md:py-0" href="#about" data-i18n="nav.about">About</a>
+      <a class="nav-link block py-2 md:py-0" href="#skills" data-i18n="nav.skills">Skills</a>
+      <a class="nav-link block py-2 md:py-0" href="#experience" data-i18n="nav.experience">Experience</a>
+      <a class="nav-link block py-2 md:py-0" href="#projects" data-i18n="nav.projects">Projects</a>
+      <a class="nav-link block py-2 md:py-0" href="cv.html" data-i18n="nav.cv">CV</a>
+      <a class="nav-link block py-2 md:py-0" href="#contact" data-i18n="nav.contact">Contact</a>
+      <div class="flex gap-1 pt-2 md:pt-0">
+        <button class="lang-btn" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </div>
   </div>
+</nav>
 
-  <main class="max-w-3xl mx-auto px-6 sm:px-8 pt-24 pb-20">
-
-    <!-- ============ HERO / NAMEPLATE & PHOTO ============ -->
-    <section class="reveal relative">
-      <div class="blueprint-grid absolute -inset-x-4 -top-6 h-40 opacity-60 -z-10 rounded"></div>
-
-      <div class="flex flex-col-reverse sm:flex-row sm:items-start justify-between gap-8">
-        <div class="flex-1">
-          <p data-i18n="hero_title" class="font-mono text-xs tracking-[0.25em] text-signal mb-3">IOT &amp; AUTOMATION ENGINEER</p>
-          <h1 class="font-display font-semibold text-4xl sm:text-5xl tracking-tight text-ink">Iqbal Fauzan</h1>
-          <p data-i18n="hero_desc" class="mt-3 max-w-xl text-graphite leading-relaxed">
-            Bridging Operational Technology and Information Technology — industrial networking,
-            M2M communication, and factory digitalization for Industry 4.0.
-          </p>
-        </div>
-
-        <div class="w-28 h-28 sm:w-36 sm:h-36 shrink-0 rounded bg-panel border border-line shadow-sm relative overflow-hidden flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
-          <span class="font-mono text-xs text-graphite tracking-widest">[ PHOTO ]</span>
-          <img src="" alt="Iqbal Fauzan" class="absolute inset-0 w-full h-full object-cover hidden" />
-        </div>
+<main>
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="grid-blueprint absolute inset-0 h-full pointer-events-none"></div>
+    <div class="relative max-w-5xl mx-auto px-6 pt-24 pb-20 md:pt-36 md:pb-32">
+      <p class="section-label" data-i18n="hero.eyebrow">IOT & AUTOMATION ENGINEER</p>
+      <h1 class="font-display text-4xl md:text-6xl font-medium leading-[1.1] mb-5">Iqbal Fauzan</h1>
+      <p class="text-lg md:text-xl text-inkmuted mb-8 max-w-xl" data-i18n="hero.tagline">Bridging OT & IT for Industry 4.0</p>
+      <div class="flex flex-wrap items-center gap-4 mb-10">
+        <a href="projects.html" class="btn btn-primary" data-i18n="hero.ctaProjects">View projects</a>
+        <a href="cv.html" class="btn btn-outline" data-i18n="hero.ctaCV">Download CV</a>
       </div>
-
-      <div class="relative mt-8 border border-line bg-panel/60 px-5 py-5 sm:px-7 sm:py-6">
-        <span class="rivet absolute top-2 left-2"></span>
-        <span class="rivet absolute top-2 right-2"></span>
-        <span class="rivet absolute bottom-2 left-2"></span>
-        <span class="rivet absolute bottom-2 right-2"></span>
-
-        <div class="flex items-start gap-5">
-          <div class="shrink-0 w-14 h-14 rounded-full border-2 border-signal flex items-center justify-center font-mono font-semibold text-signal text-sm">IF</div>
-          
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-3 font-mono text-xs w-full">
-            <div><p data-i18n="location_label" class="text-graphite tracking-widest">LOCATION</p><p class="text-ink mt-0.5">Bekasi, Indonesia</p></div>
-            <div><p data-i18n="nationality_label" class="text-graphite tracking-widest">NATIONALITY</p><p data-i18n="nationality_val" class="text-ink mt-0.5">Indonesian</p></div>
-            <div><p data-i18n="dob_label" class="text-graphite tracking-widest">DOB</p><p data-i18n="dob_val" class="text-ink mt-0.5">04 January 2000</p></div>
-            <div><p class="text-graphite tracking-widest">PHONE</p><p class="text-ink mt-0.5">+62 812 2022 7189</p></div>
-            
-            <div><p class="text-graphite tracking-widest">EMAIL</p><a href="mailto:iqbaalfau@gmail.com" class="text-ink mt-0.5 block hover:text-signal">iqbaalfau@gmail.com</a></div>
-            <div><p class="text-graphite tracking-widest">WEB</p><a href="https://iqbalfauzan.my.id" target="_blank" rel="noopener" class="text-ink mt-0.5 block hover:text-signal">iqbalfauzan.my.id</a></div>
-            <div><p class="text-graphite tracking-widest">GITHUB</p><a href="https://github.com/IqbalFau41" target="_blank" rel="noopener" class="text-ink mt-0.5 block hover:text-signal">IqbalFau41</a></div>
-            <div><p class="text-graphite tracking-widest">LINKEDIN</p><a href="https://linkedin.com/in/iqbaalfauzan" target="_blank" rel="noopener" class="text-ink mt-0.5 block hover:text-signal">iqbaalfauzan</a></div>
-          </div>
-        </div>
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span data-i18n="hero.status">Open to new opportunities</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============ PROFILE ============ -->
-    <section class="reveal mt-16">
-      <p data-i18n="profile_title" class="font-mono text-xs tracking-[0.25em] text-graphite mb-3">PROFILE</p>
-      <p data-i18n="profile_desc" class="text-ink leading-relaxed">
-        Dedicated IoT and Automation Engineer with a progressive track record from European standard machine operation to advanced industrial digitalization. Proven expertise in bridging Operational Technology (OT) and Information Technology (IT) through the design of robust industrial network topologies and the implementation of diverse machine-to-machine (M2M) communication protocols, including OPC UA, Modbus RTU/TCP, and MQTT. Passionate about leveraging automation, seamless data acquisition, and smart networking to drive Industry 4.0 initiatives and optimize manufacturing efficiency.
-      </p>
-
-      <p data-i18n="stack_title" class="font-mono text-[11px] tracking-widest text-graphite mt-6 mb-2">PRIMARY STACK</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="tag">OPC UA</span><span class="tag">Node-RED</span><span class="tag">Modbus RTU/TCP</span><span class="tag">MQTT</span><span class="tag">Siemens TIA Portal</span><span class="tag">Moxa</span><span class="tag">C/C++</span><span class="tag">Python</span><span class="tag">PLC Programming</span>
+  <!-- ABOUT -->
+  <section id="about" class="max-w-5xl mx-auto px-6 py-20 md:py-28 border-t border-hairline">
+    <span class="section-label" data-i18n="about.label">REC.01 — ABOUT</span>
+    <h2 class="font-display text-2xl md:text-3xl font-medium mb-8 reveal" data-i18n="about.heading">About me</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <p class="md:col-span-2 text-base leading-relaxed reveal js-about-text"></p>
+      <div class="reveal">
+        <p class="meta-label mb-3" data-i18n="about.stackLabel">Primary stack</p>
+        <div class="js-primary-stack"></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============ EXPERIENCE ============ -->
-    <section class="reveal mt-16">
-      <p data-i18n="exp_title" class="font-mono text-xs tracking-[0.25em] text-graphite mb-1">OPERATION LOG</p>
-      <h2 data-i18n="exp_header" class="font-display font-semibold text-2xl text-ink mb-8">Work Experience</h2>
+  <!-- SKILLS -->
+  <section id="skills" class="max-w-5xl mx-auto px-6 py-20 md:py-28 border-t border-hairline">
+    <span class="section-label" data-i18n="skills.label">REC.02 — SKILLS</span>
+    <h2 class="font-display text-2xl md:text-3xl font-medium mb-6 reveal" data-i18n="skills.heading">Technical skills</h2>
+    <div id="skills-groups"></div>
+  </section>
 
-      <div class="relative pl-7 space-y-10">
-        <div class="spine"></div>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="max-w-5xl mx-auto px-6 py-20 md:py-28 border-t border-hairline">
+    <span class="section-label" data-i18n="experience.label">REC.03 — EXPERIENCE</span>
+    <h2 class="font-display text-2xl md:text-3xl font-medium mb-10 reveal" data-i18n="experience.heading">Work history</h2>
+    <div id="experience-timeline"></div>
+  </section>
 
-        <!-- Job 1 -->
-        <div class="timeline-entry relative">
-          <span class="pad absolute -left-7 top-1.5"></span>
-          <div class="flex items-center gap-2 font-mono text-xs text-graphite">
-            <span>01/2025</span><span>—</span><span data-i18n="present" class="flex items-center gap-1.5">Present <span class="pulse-dot"></span></span>
-          </div>
-          <h3 data-i18n="job1_title" class="font-display font-semibold text-lg text-ink mt-1">IoT Engineer</h3>
-          <p class="text-sm text-graphite">PT. Musashi Auto Parts Indonesia — Bekasi, Indonesia</p>
-          <div class="flex flex-wrap gap-2 mt-3">
-            <span class="tag">Node-RED</span><span class="tag">Modbus RTU/TCP</span><span class="tag">Siemens TIA Portal</span><span class="tag">Moxa AWK Series</span><span class="tag">Keyence</span><span class="tag">Mitsubishi PLC</span>
-          </div>
-          <ul class="mt-3 space-y-1.5 text-sm text-ink/90 leading-relaxed">
-            <li data-i18n="job1_desc1">— Spearheading the implementation of the MAC (Musashi Active Connection) roadmap to drive factory digitalization and IoT integration toward 2030 Industry 4.0 goals.</li>
-            <li data-i18n="job1_desc2">— Designing and configuring wireless industrial network topologies for in-house Automated Guided Vehicles (AGV) at the Cikarang and Karawang facilities using Moxa industrial routers with Turbo Roaming features, reducing logistics lead time from 115 to 71 minutes and achieving an estimated 1.15 hours in daily man-hour savings.</li>
-            <li data-i18n="job1_desc3">— Developing robust data acquisition systems using Node-RED and Modbus protocols to extract and monitor real-time metrics from PM5500 power meters and production devices.</li>
-            <li data-i18n="job1_desc4">— Integrating diverse industrial hardware, including Keyence recorders and KV-8000 PLCs, troubleshooting communications via Siemens TIA Portal to ensure seamless machine-to-network connectivity.</li>
-          </ul>
-        </div>
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-5xl mx-auto px-6 py-20 md:py-28 border-t border-hairline">
+    <span class="section-label" data-i18n="projects.label">REC.04 — PROJECTS</span>
+    <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
+      <h2 class="font-display text-2xl md:text-3xl font-medium reveal" data-i18n="projects.heading">Featured projects</h2>
+      <a href="projects.html" class="text-sm font-medium text-blueprint" data-i18n="projects.viewAll">View all projects →</a>
+    </div>
+    <div id="featured-projects" class="grid md:grid-cols-2 gap-6"></div>
+  </section>
 
-        <!-- Job 2 -->
-        <div class="timeline-entry relative">
-          <span class="pad absolute -left-7 top-1.5"></span>
-          <div class="font-mono text-xs text-graphite">06/2024 — 12/2024</div>
-          <h3 data-i18n="job2_title" class="font-display font-semibold text-lg text-ink mt-1">Information Technology Engineer</h3>
-          <p class="text-sm text-graphite">International University of Logistics and Business — Bandung, Indonesia</p>
-          <div class="flex flex-wrap gap-2 mt-3">
-            <span class="tag">IT Infrastructure</span><span class="tag">LAN/WAN Configuration</span><span class="tag">Server Maintenance</span><span class="tag">Database Administration</span>
-          </div>
-          <ul class="mt-3 space-y-1.5 text-sm text-ink/90 leading-relaxed">
-            <li data-i18n="job2_desc1">— Managed and optimized IT infrastructure, including local network configurations and server maintenance, ensuring high availability and secure data flow.</li>
-            <li data-i18n="job2_desc2">— Maintained and integrated database systems to support daily academic and operational applications.</li>
-            <li data-i18n="job2_desc3">— Provided comprehensive technical support, troubleshooting hardware, software, and network connectivity issues across the institution.</li>
-            <li data-i18n="job2_desc4">— Contributed to the digitization of administrative workflows, strengthening the bridge between physical operations and IT solutions.</li>
-          </ul>
-        </div>
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-20 md:py-28 border-t border-hairline">
+    <span class="section-label" data-i18n="contact.label">REC.08 — CONTACT</span>
+    <h2 class="font-display text-2xl md:text-3xl font-medium mb-4 reveal" data-i18n="contact.heading">Let's connect</h2>
+    <p class="text-inkmuted mb-8 max-w-lg reveal" data-i18n="contact.body">Open to discussing IoT, industrial automation, or other opportunities.</p>
+    <div class="flex flex-wrap gap-4 reveal">
+      <a class="btn btn-primary js-email-href" href="#" data-i18n="contact.emailCta">Send an email</a>
+      <a class="btn btn-outline js-github-href" href="#" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-outline js-linkedin-href" href="#" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</main>
 
-        <!-- Job 3 -->
-        <div class="timeline-entry relative">
-          <span class="pad absolute -left-7 top-1.5"></span>
-          <div class="font-mono text-xs text-graphite">11/2023 — 05/2024</div>
-          <h3 data-i18n="job3_title" class="font-display font-semibold text-lg text-ink mt-1">IoT &amp; Automation Engineer</h3>
-          <p class="text-sm text-graphite">PT. Samudra Teknologi Pertiwi — Bandung, Indonesia</p>
-          <div class="flex flex-wrap gap-2 mt-3">
-            <span class="tag">Arduino</span><span class="tag">Raspberry Pi</span><span class="tag">PLC Programming</span><span class="tag">Android/iOS App Dev</span><span class="tag">IT/OT Integration</span>
-          </div>
-          <ul class="mt-3 space-y-1.5 text-sm text-ink/90 leading-relaxed">
-            <li data-i18n="job3_desc1">— Bridged Operational Technology (OT) and Information Technology (IT) by conceptualizing and developing embedded systems utilizing Arduino and Raspberry Pi.</li>
-            <li data-i18n="job3_desc2">— Digitized legacy industrial systems into modern monitoring platforms by developing cross-platform mobile applications (Android/iOS) and web dashboards.</li>
-            <li data-i18n="job3_desc3">— Managed, programmed, and troubleshot PLC automation systems to optimize machine logic and operational efficiency.</li>
-            <li data-i18n="job3_desc4">— Executed end-to-end electrical installations and formulated comprehensive system conceptualizations for client projects.</li>
-          </ul>
-        </div>
+<footer class="title-block no-print">
+  <div class="max-w-5xl mx-auto title-block-grid">
+    <div class="title-block-cell">
+      <span class="title-block-label" data-i18n="footer.drawnBy">DRAWN BY</span>
+      <span class="title-block-value">Iqbal Fauzan</span>
+    </div>
+    <div class="title-block-cell">
+      <span class="title-block-label" data-i18n="footer.date">DATE</span>
+      <span class="title-block-value js-footer-date">—</span>
+    </div>
+    <div class="title-block-cell">
+      <span class="title-block-label" data-i18n="footer.rev">REV</span>
+      <span class="title-block-value">A</span>
+    </div>
+    <div class="title-block-cell">
+      <span class="title-block-label">&copy; <span class="js-footer-year"></span></span>
+      <span class="title-block-value" data-i18n="footer.rights">All rights reserved.</span>
+    </div>
+  </div>
+</footer>
 
-        <!-- Job 4 -->
-        <div class="timeline-entry relative">
-          <span class="pad absolute -left-7 top-1.5"></span>
-          <div class="flex items-center gap-2 font-mono text-xs text-graphite">
-            <span>01/2025</span><span>—</span><span data-i18n="present" class="flex items-center gap-1.5">Present <span class="pulse-dot"></span></span>
-          </div>
-          <h3 data-i18n="job4_title" class="font-display font-semibold text-lg text-ink mt-1">Autoclave Machine Operator</h3>
-          <p class="text-sm text-graphite">Continental Kft. — Mako, Hungary</p>
-          <div class="flex flex-wrap gap-2 mt-3">
-            <span class="tag">European Mfg. Standards</span><span class="tag">Quality Control</span><span class="tag">Predictive Monitoring</span><span class="tag">HSE Protocols</span>
-          </div>
-          <ul class="mt-3 space-y-1.5 text-sm text-ink/90 leading-relaxed">
-            <li data-i18n="job4_desc1">— Operated complex autoclave production machinery within a high-standard European automotive manufacturing environment.</li>
-            <li data-i18n="job4_desc2">— Monitored machine conditions and production parameters, ensuring strict compliance with implemented European quality and safety standards.</li>
-            <li data-i18n="job4_desc3">— Optimized material usage to maximize production efficiency, significantly reducing manufacturing errors and waste.</li>
-            <li data-i18n="job4_desc4">— Maintained rigorous health, safety, and cleanliness (HSE) protocols in the production area.</li>
-          </ul>
-        </div>
-
-        <!-- Job 5 -->
-        <div class="timeline-entry relative">
-          <span class="pad absolute -left-7 top-1.5"></span>
-          <div class="flex items-center gap-2 font-mono text-xs text-graphite">
-            <span>01/2025</span><span>—</span><span data-i18n="present" class="flex items-center gap-1.5">Present <span class="pulse-dot"></span></span>
-          </div>
-          <h3 data-i18n="job5_title" class="font-display font-semibold text-lg text-ink mt-1">Maintenance Engineering Intern</h3>
-          <p class="text-sm text-graphite">PT. Mekar Armada Jaya — Bekasi, Indonesia</p>
-          <div class="flex flex-wrap gap-2 mt-3">
-            <span class="tag">Preventive Maintenance</span><span class="tag">Heavy Industrial Machinery</span><span class="tag">Digital Documentation</span>
-          </div>
-          <ul class="mt-3 space-y-1.5 text-sm text-ink/90 leading-relaxed">
-            <li data-i18n="job5_desc1">— Performed predictive and preventive maintenance on heavy industrial equipment including stamping machines, welding units, and conveyors.</li>
-            <li data-i18n="job5_desc2">— Initiated the digitization of maintenance manual books, streamlining the troubleshooting and repair processes.</li>
-            <li data-i18n="job5_desc3">— Contributed to machine installation processes in collaboration with internal teams and external vendors.</li>
-            <li data-i18n="job5_desc4">— Conducted routine performance monitoring and maintenance recording to increase exhaust channel efficiency.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EDUCATION ============ -->
-    <section class="reveal mt-16">
-      <p data-i18n="edu_title" class="font-mono text-xs tracking-[0.25em] text-graphite mb-1">EDUCATION</p>
-      <h2 data-i18n="edu_header" class="font-display font-semibold text-2xl text-ink mb-6">Bachelor of Applied Science (D4), Automation Engineering</h2>
-
-      <div class="font-mono text-xs text-graphite">08/2018 — 08/2022</div>
-      <p class="text-sm text-graphite mt-1">Bandung Manufacturing Polytechnic — Bandung, Indonesia</p>
-      <div class="flex flex-wrap gap-2 mt-3">
-        <span class="tag">MongoDB</span><span class="tag">ReactJS</span><span class="tag">Node.js</span><span class="tag">Firebase</span><span class="tag">MySQL</span><span class="tag">MQTT</span>
-      </div>
-      <ul class="mt-3 space-y-1.5 text-sm text-ink/90 leading-relaxed">
-        <li data-i18n="edu_desc1">— Designed and built a Digital Twin Monitoring System utilizing Industrial Internet of Things (IIoT) architecture for injection molding machines (Case Study: PT. Biggy Cemerlang).</li>
-        <li data-i18n="edu_desc2">— Developed a web-based monitoring platform enabling real-time data visualization and remote access to operational metrics.</li>
-        <li data-i18n="edu_desc3">— Focused research on improving production efficiency, accurate machine performance tracking, and enabling predictive maintenance capabilities.</li>
-      </ul>
-    </section>
-
-    <!-- ============ CERTIFICATIONS ============ -->
-    <section class="reveal mt-16">
-      <p data-i18n="cert_title" class="font-mono text-xs tracking-[0.25em] text-graphite mb-1">CERTIFICATIONS &amp; ACHIEVEMENTS</p>
-      <h2 data-i18n="cert_header" class="font-display font-semibold text-2xl text-ink mb-6">Credentials</h2>
-
-      <div class="divide-y divide-line border-t border-b border-line">
-        <div class="flex items-baseline gap-4 py-4">
-          <span class="font-mono text-xs text-signal w-12 shrink-0">2022</span>
-          <div>
-            <p data-i18n="cert1_title" class="text-ink font-medium">Certified Electrical Installation and Maintenance Engineer</p>
-            <p data-i18n="cert_bnsp" class="text-sm text-graphite">BNSP (Indonesian Professional Certification Authority)</p>
-          </div>
-        </div>
-        <div class="flex items-baseline gap-4 py-4">
-          <span class="font-mono text-xs text-signal w-12 shrink-0">2020</span>
-          <div>
-            <p data-i18n="cert2_title" class="text-ink font-medium">Certified Complex Industrial Electrical Maintenance</p>
-            <p data-i18n="cert_bnsp" class="text-sm text-graphite">BNSP (Indonesian Professional Certification Authority)</p>
-          </div>
-        </div>
-        <div class="flex items-baseline gap-4 py-4">
-          <span class="font-mono text-xs text-amber w-12 shrink-0">2020</span>
-          <div>
-            <p data-i18n="cert3_title" class="text-ink font-medium">Runner-Up, Indonesian ABU Robot Contest (KRAI)</p>
-            <p data-i18n="cert3_desc" class="text-sm text-graphite">Regional Level II | Role: Robotics Team Member</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SKILLS ============ -->
-    <section class="reveal mt-16">
-      <p data-i18n="skill_title" class="font-mono text-xs tracking-[0.25em] text-graphite mb-1">CAPABILITIES</p>
-      <h2 data-i18n="skill_header" class="font-display font-semibold text-2xl text-ink mb-6">Technical Skills &amp; Languages</h2>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        <div>
-          <h3 data-i18n="skill_cat1" class="font-mono text-xs tracking-widest text-graphite mb-3 border-b border-line pb-2">AUTOMATION &amp; HARDWARE</h3>
-          <ul class="space-y-2 text-sm text-ink/90 mb-6">
-            <li class="flex justify-between"><span>PLC Programming (Siemens, Mitsubishi, Keyence)</span></li>
-            <li class="flex justify-between"><span>Raspberry Pi, Arduino</span></li>
-          </ul>
-
-          <h3 data-i18n="skill_cat2" class="font-mono text-xs tracking-widest text-graphite mb-3 border-b border-line pb-2">IOT &amp; SOFTWARE</h3>
-          <ul class="space-y-2 text-sm text-ink/90 mb-6">
-            <li class="flex justify-between"><span>C/C++, Python, JavaScript, Node.js</span></li>
-            <li class="flex justify-between"><span>Node-RED, OPC UA, Modbus RTU/TCP, MQTT</span></li>
-          </ul>
-          
-          <h3 data-i18n="skill_cat3" class="font-mono text-xs tracking-widest text-graphite mb-3 border-b border-line pb-2">DATABASES &amp; CLOUD</h3>
-          <ul class="space-y-2 text-sm text-ink/90">
-            <li class="flex justify-between"><span>MySQL, MongoDB, Firebase</span></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 data-i18n="skill_cat4" class="font-mono text-xs tracking-widest text-graphite mb-3 border-b border-line pb-2">ENGINEERING &amp; DESIGN TOOLS</h3>
-          <ul class="space-y-2 text-sm text-ink/90 mb-6">
-            <li class="flex justify-between"><span>SolidWorks (CAD), Proteus, VS Code</span></li>
-            <li class="flex justify-between"><span>macOS Environment (Virtualization), OpenClaw</span></li>
-          </ul>
-
-          <h3 data-i18n="skill_cat5" class="font-mono text-xs tracking-widest text-graphite mb-3 border-b border-line pb-2">ADDITIONAL DEVELOPMENT</h3>
-          <ul class="space-y-2 text-sm text-ink/90 mb-6">
-            <li class="flex justify-between"><span>Mobile App Dev (Flutter, Dart, Android Studio)</span></li>
-          </ul>
-
-          <h3 data-i18n="languages" class="font-mono text-xs tracking-widest text-graphite mb-3 border-b border-line pb-2">LANGUAGES</h3>
-          <ul class="space-y-2 text-sm text-ink/90">
-            <li class="flex items-center justify-between">
-              <span>Indonesian (Native)</span>
-              <div class="flex gap-1"><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div></div>
-            </li>
-            <li class="flex items-center justify-between">
-              <span>English (B1)</span>
-              <div class="flex gap-1"><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar w-4"></div><div class="h-1.5 bar w-4"></div></div>
-            </li>
-            <li class="flex items-center justify-between">
-              <span>German (B1 - In Prep)</span>
-              <div class="flex gap-1"><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar w-4"></div><div class="h-1.5 bar w-4"></div></div>
-            </li>
-            <li class="flex items-center justify-between">
-              <span>Hungarian (A1)</span>
-              <div class="flex gap-1"><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar w-4"></div><div class="h-1.5 bar w-4"></div><div class="h-1.5 bar w-4"></div><div class="h-1.5 bar w-4"></div></div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
