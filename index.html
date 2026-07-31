@@ -144,25 +144,50 @@
   <div class="no-print fixed top-0 inset-x-0 z-30 backdrop-blur bg-paper/80 border-b border-line">
     <div class="max-w-3xl mx-auto px-6 sm:px-8 h-14 flex items-center justify-between">
       <span class="font-mono text-xs tracking-widest text-graphite">IF / 2026</span>
-      <button onclick="window.print()"
-        class="font-mono text-xs tracking-wide border border-line px-3 py-1.5 hover:border-signal hover:text-signal transition-colors">
-        DOWNLOAD PDF
-      </button>
+      
+      <!-- Right Side: Language Switcher & Download -->
+      <div class="flex items-center gap-6">
+        <!-- Language Option (EN is Active/Bold) -->
+        <div class="flex items-center gap-2 font-mono text-[11px] tracking-widest text-graphite">
+          <a href="#" class="text-signal font-bold transition-colors">EN</a>
+          <span class="text-line">/</span>
+          <a href="#" class="hover:text-signal transition-colors">ID</a>
+          <span class="text-line">/</span>
+          <a href="#" class="hover:text-signal transition-colors">DE</a>
+        </div>
+        
+        <button onclick="window.print()"
+          class="font-mono text-xs tracking-wide border border-line px-3 py-1.5 hover:border-signal hover:text-signal transition-colors">
+          DOWNLOAD PDF
+        </button>
+      </div>
     </div>
   </div>
 
   <main class="max-w-3xl mx-auto px-6 sm:px-8 pt-24 pb-20">
 
-    <!-- ============ HERO / NAMEPLATE ============ -->
+    <!-- ============ HERO / NAMEPLATE & PHOTO ============ -->
     <section class="reveal relative">
       <div class="blueprint-grid absolute -inset-x-4 -top-6 h-40 opacity-60 -z-10 rounded"></div>
 
-      <p class="font-mono text-xs tracking-[0.25em] text-signal mb-3">IOT &amp; AUTOMATION ENGINEER</p>
-      <h1 class="font-display font-semibold text-4xl sm:text-5xl tracking-tight text-ink">Iqbal Fauzan</h1>
-      <p class="mt-3 max-w-xl text-graphite leading-relaxed">
-        Bridging Operational Technology and Information Technology — industrial networking,
-        M2M communication, and factory digitalization for Industry&nbsp;4.0.
-      </p>
+      <div class="flex flex-col-reverse sm:flex-row sm:items-start justify-between gap-8">
+        <!-- Left Side: Titles and Description -->
+        <div class="flex-1">
+          <p class="font-mono text-xs tracking-[0.25em] text-signal mb-3">IOT &amp; AUTOMATION ENGINEER</p>
+          <h1 class="font-display font-semibold text-4xl sm:text-5xl tracking-tight text-ink">Iqbal Fauzan</h1>
+          <p class="mt-3 max-w-xl text-graphite leading-relaxed">
+            Bridging Operational Technology and Information Technology — industrial networking,
+            M2M communication, and factory digitalization for Industry&nbsp;4.0.
+          </p>
+        </div>
+
+        <!-- Right Side: Photo Layout Placeholder -->
+        <div class="w-28 h-28 sm:w-36 sm:h-36 shrink-0 rounded bg-panel border border-line shadow-sm relative overflow-hidden flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+          <span class="font-mono text-xs text-graphite tracking-widest">[ PHOTO ]</span>
+          <!-- Nanti ganti 'src' dengan link atau path foto Anda -->
+          <img src="" alt="Iqbal Fauzan" class="absolute inset-0 w-full h-full object-cover hidden" />
+        </div>
+      </div>
 
       <!-- nameplate card -->
       <div class="relative mt-8 border border-line bg-panel/60 px-5 py-5 sm:px-7 sm:py-6">
@@ -212,7 +237,7 @@
       <p class="text-ink leading-relaxed">
         Dedicated IoT and Automation Engineer with a progressive track record from European standard
         machine operation to advanced industrial digitalization. Proven expertise in bridging Operational
-        Technology yang bagus (OT) and Information Technology (IT) through the design of robust industrial network
+        Technology (OT) and Information Technology (IT) through the design of robust industrial network
         topologies and the implementation of diverse machine-to-machine (M2M) communication protocols,
         including OPC UA, Modbus RTU/TCP, and MQTT. Passionate about leveraging automation, seamless
         data acquisition, and smart networking to drive Industry 4.0 initiatives and optimize manufacturing
@@ -383,123 +408,57 @@
 
     <!-- ============ SKILLS ============ -->
     <section class="reveal mt-16">
-      <p class="font-mono text-xs tracking-[0.25em] text-graphite mb-1">TECHNICAL SKILLS</p>
-      <h2 class="font-display font-semibold text-2xl text-ink mb-6">Skills</h2>
+      <p class="font-mono text-xs tracking-[0.25em] text-graphite mb-1">CAPABILITIES</p>
+      <h2 class="font-display font-semibold text-2xl text-ink mb-6">Technical Skills &amp; Languages</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <!-- Tools & Software -->
+        <div>
+          <h3 class="font-mono text-xs tracking-widest text-graphite mb-3 border-b border-line pb-2">SOFTWARE &amp; PROTOCOLS</h3>
+          <ul class="space-y-2 text-sm text-ink/90">
+            <li class="flex justify-between"><span>Node-RED &amp; TIA Portal</span></li>
+            <li class="flex justify-between"><span>OPC UA, MQTT, Modbus RTU/TCP</span></li>
+            <li class="flex justify-between"><span>C/C++, Python</span></li>
+            <li class="flex justify-between"><span>ReactJS, Node.js, MongoDB</span></li>
+          </ul>
+        </div>
 
-      <div class="grid sm:grid-cols-2 gap-6">
+        <!-- Languages -->
         <div>
-          <p class="font-mono text-[11px] tracking-widest text-graphite mb-2">AUTOMATION &amp; HARDWARE</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag">PLC (Siemens)</span><span class="tag">PLC (Mitsubishi)</span><span class="tag">PLC (Keyence)</span><span class="tag">Raspberry Pi</span>
-          </div>
-        </div>
-        <div>
-          <p class="font-mono text-[11px] tracking-widest text-graphite mb-2">IOT &amp; SOFTWARE</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag">C/C++</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">Node.js</span>
-          </div>
-        </div>
-        <div>
-          <p class="font-mono text-[11px] tracking-widest text-graphite mb-2">DATABASES &amp; CLOUD</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Firebase</span>
-          </div>
-        </div>
-        <div>
-          <p class="font-mono text-[11px] tracking-widest text-graphite mb-2">ENGINEERING &amp; DESIGN</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag">SolidWorks (CAD)</span><span class="tag">Proteus</span><span class="tag">VS Code</span>
-          </div>
-        </div>
-        <div class="sm:col-span-2">
-          <p class="font-mono text-[11px] tracking-widest text-graphite mb-2">ADDITIONAL DEVELOPMENT</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Android Studio</span>
-          </div>
+          <h3 class="font-mono text-xs tracking-widest text-graphite mb-3 border-b border-line pb-2">LANGUAGES</h3>
+          <ul class="space-y-2 text-sm text-ink/90">
+            <li class="flex items-center justify-between">
+              <span>Indonesian</span>
+              <div class="flex gap-1"><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div></div>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>English</span>
+              <div class="flex gap-1"><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar w-4"></div></div>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>German</span>
+              <div class="flex gap-1"><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar on w-4"></div><div class="h-1.5 bar w-4"></div><div class="h-1.5 bar w-4"></div><div class="h-1.5 bar w-4"></div></div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
-
-    <!-- ============ LANGUAGES ============ -->
-    <section class="reveal mt-16">
-      <p class="font-mono text-xs tracking-[0.25em] text-graphite mb-1">LANGUAGES</p>
-      <h2 class="font-display font-semibold text-2xl text-ink mb-6">Signal Strength</h2>
-
-      <div class="space-y-4 max-w-sm">
-        <!-- Indonesian: Native -->
-        <div class="flex items-center justify-between">
-          <span class="text-sm text-ink">Indonesian</span>
-          <div class="flex items-center gap-3">
-            <span class="font-mono text-xs text-graphite">Native</span>
-            <div class="flex items-end gap-0.5 h-4">
-              <span class="bar on" style="height:40%"></span><span class="bar on" style="height:60%"></span><span class="bar on" style="height:80%"></span><span class="bar on" style="height:100%"></span>
-            </div>
-          </div>
-        </div>
-        <!-- English B1 -->
-        <div class="flex items-center justify-between">
-          <span class="text-sm text-ink">English</span>
-          <div class="flex items-center gap-3">
-            <span class="font-mono text-xs text-graphite">Intermediate · B1</span>
-            <div class="flex items-end gap-0.5 h-4">
-              <span class="bar on" style="height:40%"></span><span class="bar on" style="height:60%"></span><span class="bar" style="height:80%"></span><span class="bar" style="height:100%"></span>
-            </div>
-          </div>
-        </div>
-        <!-- German B1 in preparation -->
-        <div class="flex items-center justify-between">
-          <span class="text-sm text-ink">German</span>
-          <div class="flex items-center gap-3">
-            <span class="font-mono text-xs text-graphite">B1 · in preparation</span>
-            <div class="flex items-end gap-0.5 h-4">
-              <span class="bar on" style="height:40%"></span><span class="bar on" style="height:60%"></span><span class="bar" style="height:80%"></span><span class="bar" style="height:100%"></span>
-            </div>
-          </div>
-        </div>
-        <!-- Hungarian A1 -->
-        <div class="flex items-center justify-between">
-          <span class="text-sm text-ink">Hungarian</span>
-          <div class="flex items-center gap-3">
-            <span class="font-mono text-xs text-graphite">Beginner · A1</span>
-            <div class="flex items-end gap-0.5 h-4">
-              <span class="bar on" style="height:40%"></span><span class="bar" style="height:60%"></span><span class="bar" style="height:80%"></span><span class="bar" style="height:100%"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FOOTER / SIGNOFF ============ -->
-    <footer class="reveal mt-20 pt-8 border-t border-line">
-      <div class="flex flex-wrap items-center justify-between gap-4">
-        <p class="font-mono text-xs text-graphite italic">Bekasi, Aug 2026 — Iqbal Fauzan</p>
-        <div class="flex gap-4 font-mono text-xs">
-          <a href="mailto:iqbaalfau@gmail.com" class="text-graphite hover:text-signal transition-colors">Email</a>
-          <a href="https://github.com/IqbalFau41" target="_blank" rel="noopener" class="text-graphite hover:text-signal transition-colors">GitHub</a>
-          <a href="https://linkedin.com/in/iqbaalfauzan" target="_blank" rel="noopener" class="text-graphite hover:text-signal transition-colors">LinkedIn</a>
-        </div>
-      </div>
-    </footer>
 
   </main>
 
   <script>
-    // Scroll reveal
-    const els = document.querySelectorAll('.reveal');
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            io.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.1 });
-      els.forEach(el => io.observe(el));
-    } else {
-      els.forEach(el => el.classList.add('in'));
-    }
+    // Scroll reveal logic
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observer.observe(el);
+    });
   </script>
-
 </body>
 </html>
