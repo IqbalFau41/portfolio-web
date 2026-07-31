@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<title>Projects — Iqbal Fauzan</title>
+<meta name="description" content="Complete list of IoT & industrial automation projects by Iqbal Fauzan." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { paper: "#FAFAF8", ink: "#1B1F23", inkmuted: "#5B6169", blueprint: "#2E5FA3", signal: "#1E8F6F", hairline: "#D7DBE0" },
+        fontFamily: {
+          display: ['"Space Grotesk"', "sans-serif"],
+          body: ["Inter", "sans-serif"],
+          mono: ['"JetBrains Mono"', "monospace"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-body bg-paper text-ink">
+
+<nav class="site-nav no-print">
+  <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
+    <a href="index.html" class="font-display font-medium text-lg text-ink">Iqbal Fauzan<span class="text-blueprint">.</span></a>
+    <button id="nav-toggle" class="md:hidden p-2" aria-label="Menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div id="nav-menu" class="md:flex items-center gap-7 py-4 md:py-0">
+      <a class="nav-link block py-2 md:py-0" href="index.html#about" data-i18n="nav.about">About</a>
+      <a class="nav-link block py-2 md:py-0" href="index.html#skills" data-i18n="nav.skills">Skills</a>
+      <a class="nav-link block py-2 md:py-0" href="index.html#experience" data-i18n="nav.experience">Experience</a>
+      <a class="nav-link is-active block py-2 md:py-0" href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a class="nav-link block py-2 md:py-0" href="cv.html" data-i18n="nav.cv">CV</a>
+      <a class="nav-link block py-2 md:py-0" href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      <div class="flex gap-1 pt-2 md:pt-0">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="id">ID</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="relative overflow-hidden">
+    <div class="grid-blueprint absolute inset-0 h-full pointer-events-none"></div>
+    <div class="relative max-w-5xl mx-auto px-6 pt-20 pb-14 md:pt-28 md:pb-16">
+      <span class="section-label" data-i18n="projects.label">REC.04 — PROJECTS</span>
+      <h1 class="font-display text-3xl md:text-5xl font-medium mb-4" data-i18n="projects.headingAll">All projects</h1>
+      <p class="text-inkmuted max-w-xl" data-i18n="projects.subheadingAll">Full documentation of industrial IoT & automation projects.</p>
+    </div>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 pb-24 md:pb-32">
+    <div id="projects-list" class="grid md:grid-cols-2 gap-6"></div>
+  </section>
+</main>
+
+<footer class="title-block no-print">
+  <div class="max-w-5xl mx-auto title-block-grid">
+    <div class="title-block-cell">
+      <span class="title-block-label" data-i18n="footer.drawnBy">DRAWN BY</span>
+      <span class="title-block-value">Iqbal Fauzan</span>
+    </div>
+    <div class="title-block-cell">
+      <span class="title-block-label" data-i18n="footer.date">DATE</span>
+      <span class="title-block-value js-footer-date">—</span>
+    </div>
+    <div class="title-block-cell">
+      <span class="title-block-label" data-i18n="footer.rev">REV</span>
+      <span class="title-block-value">A</span>
+    </div>
+    <div class="title-block-cell">
+      <span class="title-block-label">&copy; <span class="js-footer-year"></span></span>
+      <span class="title-block-value" data-i18n="footer.rights">All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
